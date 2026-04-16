@@ -581,7 +581,7 @@ nav.scrolled .nav-hamburger span {
   bottom: 0;
   left: 0;
   right: 0;
-  height: clamp(80px, 12vh, 100px);
+  height: clamp(40px, 12vh, 60px);
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -670,17 +670,18 @@ nav.scrolled .nav-hamburger span {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: clamp(30px, 5vw, 60px);
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: clamp(20px, 3vw, 40px);
 }
 
 .feature-item {
-  flex: 1 1 250px;
+  flex: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0; /* Allow shrinking below content size if needed */
 }
 
 .feature-icon {
@@ -1735,6 +1736,16 @@ footer {
   }
   .nav-hamburger {
     display: flex !important;
+  }
+
+  .features-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .feature-item {
+    flex: 1 1 200px;
   }
   .nav-hamburger span {
     background: var(--text-main);
