@@ -1,0 +1,1159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Aspire Hotel – Guwahati</title>
+    <meta
+      name="description"
+      content="The Aspire Hotel, located in the heart of Guwahati. Luxurious, modern and comfortable rooms. Best prices and memorable stay awaits you."
+    />
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- NAV (Glassmorphism) -->
+    <nav id="main-nav">
+      <a href="#home" class="nav-logo" id="nav-logo-link">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle
+            cx="14"
+            cy="14"
+            r="12"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <path
+            d="M8 14 C8 10 11 8 14 8 C17 8 20 10 20 14"
+            stroke="currentColor"
+            stroke-width="1"
+            fill="none"
+          />
+          <line
+            x1="14"
+            y1="8"
+            x2="14"
+            y2="20"
+            stroke="currentColor"
+            stroke-width="1"
+          />
+        </svg>
+        The Aspire Hotel
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" id="nav-home">Home</a></li>
+        <li><a href="#rooms" id="nav-rooms">Rooms</a></li>
+        <li><a href="#explore" id="nav-explore">Explore</a></li>
+        <li><a href="#news-offers" id="nav-news">News & Offers</a></li>
+        <li><a href="#map" id="nav-map">Map</a></li>
+        <li><a href="#contact" id="nav-contact">Contact Us</a></li>
+      </ul>
+      <!-- <a href="#rooms" class="nav-btn" id="nav-reservation-btn">Reservation</a> -->
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div class="mobile-menu" id="mobile-menu">
+      <button
+        class="mobile-menu-close"
+        id="mobile-menu-close"
+        aria-label="Close menu"
+      >
+        ✕
+      </button>
+      <ul class="mobile-nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#news-offers">News & Offers</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <a
+        href="#rooms"
+        class="nav-btn"
+        style="margin-top: 40px; display: inline-block"
+        >Reservation</a
+      >
+    </div>
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-slider" data-slider="hero">
+        <div class="slider-track">
+          <div
+            class="slider-slide"
+            style="background-image: url(&quot;./assets/hero_1.png&quot;)"
+          ></div>
+          <div
+            class="slider-slide"
+            style="background-image: url(&quot;./assets/hero_1.png&quot;)"
+          ></div>
+          <div
+            class="slider-slide"
+            style="background-image: url(&quot;./assets/hero_1.png&quot;)"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Moved slider nav outside to ensure it sits above the overlay -->
+      <div class="slider-nav hero-nav">
+        <button class="slider-arrow prev" aria-label="Previous slide">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button class="slider-arrow next" aria-label="Next slide">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-stars">★★★★★</div>
+        <h1 class="hero-title">LARITA LUXURY HOTEL</h1>
+        <p class="hero-sub">
+          Located in the heart of the city, this luxurious, modern hotel offers
+          top-notch amenities for a perfect stay.
+        </p>
+        <a href="#rooms" class="hero-explore" id="hero-explore-btn"
+          >EXPLORE &nbsp;→</a
+        >
+      </div>
+
+      <div class="hero-bottom-bar">
+        <div class="hero-op-info">
+          <div class="since-box">SINCE 1970 - 56 YEARS OF OPERATION</div>
+          <a href="#about" class="story-link">LARITA STORY &nbsp;→</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-val">+6.4K</span>
+            <span class="stat-lab">Bookings</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">4.9/5</span>
+            <span class="stat-lab"
+              ><span class="star-mini">★</span> 3.5K Reviews</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-row" id="features">
+      <div class="features-grid">
+        <div class="feature-item reveal">
+          <div class="feature-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Located in the heart of the city</h3>
+          <p class="feature-text">
+            Ideally located in the city's heart for easy access and convenience.
+          </p>
+        </div>
+
+        <div class="feature-item reveal">
+          <div class="feature-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                d="M4 19h16l1 2h-18l1-2zm16-4v2l-1 1h-14l-1-1v-2c0-2 2-4 4-4h8c2 0 4 2 4 4zM7 7a2 2 0 114 0 2 2 0 01-4 0z"
+              />
+            </svg>
+          </div>
+          <h3 class="feature-title">Luxurious, modern, and comfortable</h3>
+          <p class="feature-text">
+            Experience a luxurious, modern, and fully equipped space for
+            comfort.
+          </p>
+        </div>
+
+        <div class="feature-item reveal">
+          <div class="feature-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                d="M12 4v1m0 11v1m8-5h-1M5 11H4m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 11a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+          </div>
+          <h3 class="feature-title">Friendly and welcoming staff</h3>
+          <p class="feature-text">
+            Our friendly and welcoming staff ensure a delightful stay every
+            time.
+          </p>
+        </div>
+
+        <div class="feature-item reveal">
+          <div class="feature-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.407 2.5 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.407-2.5-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <h3 class="feature-title">Best prices and great offers</h3>
+          <p class="feature-text">
+            Enjoy unbeatable prices with fantastic offers tailored just for you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WELCOME SECTION -->
+    <section class="welcome-section" id="about">
+      <div class="welcome-container">
+        <div class="welcome-visuals reveal">
+          <div class="img-stagger-1">
+            <img src="./assets/about_1.png" alt="Luxury Room View 1" />
+          </div>
+          <div class="img-stagger-2">
+            <img src="./assets/about_2.png" alt="Luxury Room View 2" />
+          </div>
+        </div>
+        <div class="welcome-content reveal">
+          <div class="content-header">
+            <span class="eyebrow">WELCOME TO LARITA</span>
+            <h2 class="title">Luxury hotel in the<br />heart of the city.</h2>
+          </div>
+          <p class="description">
+            Larita Luxury Hotel, in the heart of the city, offers over 500
+            modern, luxurious rooms. Enjoy premium facilities, perfect for
+            relaxation and indulgence. Our friendly staff ensures a seamless,
+            personalized experience, with stunning city views. Discover true
+            luxury and hospitality at Larita.
+          </p>
+          <a href="#explore" class="btn-lara-read">READ MORE &nbsp;→</a>
+        </div>
+      </div>
+
+      <!-- RATINGS STRIP -->
+      <div class="ratings-row reveal">
+        <div class="ratings-container">
+          <div class="rating-item">
+            <div class="rating-logo">B.</div>
+            <div class="rating-info">
+              <div class="rating-val">
+                4.9/5 <span class="stars">★</span>
+                <span class="quality">Excellent</span>
+              </div>
+              <div class="rating-count">3.5K Reviews on Booking</div>
+            </div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-logo brand-agoda">a</div>
+            <div class="rating-info">
+              <div class="rating-val">
+                5/5 <span class="stars">★</span>
+                <span class="quality">Excellent</span>
+              </div>
+              <div class="rating-count">4.1K Reviews on Agoda</div>
+            </div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-logo brand-trip">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .5C5.649.5.5 5.649.5 12c0 6.351 5.149 11.5 11.5 11.5s11.5-5.149 11.5-11.5C23.5 5.649 18.351.5 12 .5zM9 16c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2zm6 0c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2z"
+                />
+              </svg>
+            </div>
+            <div class="rating-info">
+              <div class="rating-val">
+                4.8/5 <span class="stars">★</span>
+                <span class="quality">Good</span>
+              </div>
+              <div class="rating-count">2.4K Reviews on Tripadvisor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROOMS COLLECTION -->
+    <section class="rooms" id="rooms">
+      <div class="rooms-header reveal">
+        <span class="eyebrow">EXQUISITE AND LUXURIOUS</span>
+        <h2 class="title">Room and suite collection</h2>
+      </div>
+
+      <div class="collection-slider reveal" data-slider="room-collection">
+        <div class="slider-track">
+          <!-- Slide 1: Standard Room -->
+          <div class="slider-slide">
+            <div class="room-card-large">
+              <div class="room-info-pane">
+                <div class="room-price-info">
+                  From: <span class="price-val">$210</span> / NIGHT
+                </div>
+                <h3 class="room-name-large">Standard room</h3>
+                <p class="room-desc-large">
+                  Cozy and modern, this room offers essential amenities for a
+                  comfortable stay, perfect for solo travelers or couples
+                  seeking relaxation.
+                </p>
+                <div class="room-details-grid">
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <rect x="3" y="4" width="18" height="16" rx="2" />
+                      <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                    <span>ROOM SIZE 28 M²</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M3 12h18M12 3v18" />
+                    </svg>
+                    <span>1 KING BED</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 16v.01M12 8v4" />
+                    </svg>
+                    <span>2 ADULTS - 1 CHILD</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 2v20M2 12h20" />
+                    </svg>
+                    <span>STREET VIEW</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+                    </svg>
+                    <span>SMOKING - NO</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                      />
+                    </svg>
+                    <span>BREAKFAST - YES</span>
+                  </div>
+                </div>
+                <div class="room-actions-large">
+                  <a href="#contact" class="btn-book-now">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      style="width: 14px; height: 14px; margin-right: 8px"
+                    >
+                      <rect x="3" y="4" width="18" height="16" rx="2" />
+                      <path d="M16 2v4M8 2v4M3 10h18" />
+                    </svg>
+                    BOOK NOW
+                  </a>
+                  <a href="#" class="btn-view-room">VIEW ROOM &nbsp;→</a>
+                </div>
+              </div>
+              <div class="room-image-pane">
+                <img
+                  src="./assets/room_standard_coll.png"
+                  alt="Standard Room"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Deluxe Room -->
+          <div class="slider-slide">
+            <div class="room-card-large">
+              <div class="room-info-pane">
+                <div class="room-price-info">
+                  From: <span class="price-val">$350</span> / NIGHT
+                </div>
+                <h3 class="room-name-large">Deluxe room</h3>
+                <p class="room-desc-large">
+                  Experience enhanced luxury with premium furnishings and
+                  breathtaking city panoramas. A perfect blend of style and
+                  comfort.
+                </p>
+                <div class="room-details-grid">
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <rect x="3" y="4" width="18" height="16" rx="2" />
+                    </svg>
+                    <span>ROOM SIZE 42 M²</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M3 12h18M12 3v18" />
+                    </svg>
+                    <span>1 KING BED</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <span>2 ADULTS - 1 CHILD</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 2v20M2 12h20" />
+                    </svg>
+                    <span>CITY VIEW</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <span>SMOKING - NO</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 2L2 7l10 5" />
+                    </svg>
+                    <span>BREAKFAST - YES</span>
+                  </div>
+                </div>
+                <div class="room-actions-large">
+                  <a href="#contact" class="btn-book-now">BOOK NOW</a>
+                  <a href="#" class="btn-view-room">VIEW ROOM &nbsp;→</a>
+                </div>
+              </div>
+              <div class="room-image-pane">
+                <img src="./assets/room_deluxe_coll.png" alt="Deluxe Room" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Executive Suite -->
+          <div class="slider-slide">
+            <div class="room-card-large">
+              <div class="room-info-pane">
+                <div class="room-price-info">
+                  From: <span class="price-val">$750</span> / NIGHT
+                </div>
+                <h3 class="room-name-large">Executive Suite</h3>
+                <p class="room-desc-large">
+                  Our most exclusive accommodation featuring a separate living
+                  area and unparalleled luxury amenities for the elite traveler.
+                </p>
+                <div class="room-details-grid">
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <rect x="3" y="4" width="18" height="16" rx="2" />
+                    </svg>
+                    <span>ROOM SIZE 85 M²</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M3 12h18" />
+                    </svg>
+                    <span>2 KING BEDS</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <span>4 ADULTS</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 21l-4-4" />
+                    </svg>
+                    <span>SKYLINE VIEW</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <span>SMOKING - NO</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M22 12h-4" />
+                    </svg>
+                    <span>BREAKFAST - YES</span>
+                  </div>
+                </div>
+                <div class="room-actions-large">
+                  <a href="#contact" class="btn-book-now">BOOK NOW</a>
+                  <a href="#" class="btn-view-room">VIEW ROOM &nbsp;→</a>
+                </div>
+              </div>
+              <div class="room-image-pane">
+                <img src="./assets/room_suite_coll.png" alt="Executive Suite" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="slider-arrow prev" aria-label="Previous slide">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button class="slider-arrow next" aria-label="Next slide">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- FACILITIES COLLECTION SLIDER -->
+    <section class="rooms" id="services">
+      <div class="rooms-header reveal">
+        <span class="section-eyebrow">FACILITIES AND SERVICES</span>
+        <h2 class="section-title">Discover our services</h2>
+      </div>
+
+      <div class="collection-slider reveal" data-slider="facility-collection">
+        <div class="slider-track">
+          <!-- Slide 1: Spa -->
+          <div class="slider-slide">
+            <div class="room-card-large">
+              <div class="room-info-pane">
+                <div class="room-price-info">
+                  OPEN DAILY: <span class="price-val">09 AM - 10 PM</span>
+                </div>
+                <h3 class="room-name-large">Spa & Wellness</h3>
+                <p class="room-desc-large">
+                  Indulge in our signature treatments and therapeutic massages
+                  designed to rejuvenate your mind, body, and soul in a serene
+                  luxury environment.
+                </p>
+                <div class="room-details-grid">
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <span>6 TREATMENT ROOMS</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 4v16M4 12h16" />
+                    </svg>
+                    <span>STEAM & SAUNA</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M22 12h-4" />
+                    </svg>
+                    <span>ORGANIC PRODUCTS</span>
+                  </div>
+                </div>
+                <div class="room-actions-large no-res">
+                  <a href="#" class="btn-view-room">EXPLORE SPA &nbsp;→</a>
+                </div>
+              </div>
+              <div class="room-image-pane">
+                <img src="./assets/facility_spa.png" alt="Spa & Wellness" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Dining -->
+          <div class="slider-slide">
+            <div class="room-card-large">
+              <div class="room-info-pane">
+                <div class="room-price-info">
+                  FINE DINING: <span class="price-val">7 PM - 11 PM</span>
+                </div>
+                <h3 class="room-name-large">The Grand Restaurant</h3>
+                <p class="room-desc-large">
+                  Taste curated global cuisines prepared by multi-award winning
+                  world-class chefs. An intimate atmosphere for the most
+                  discerning palates.
+                </p>
+                <div class="room-details-grid">
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    </svg>
+                    <span>GLOBAL CUISINE</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M3 12h18" />
+                    </svg>
+                    <span>80 SEATING CAPACITY</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 21l-4-4" />
+                    </svg>
+                    <span>PRIVATE DINING</span>
+                  </div>
+                </div>
+                <div class="room-actions-large no-res">
+                  <a href="#" class="btn-view-room">VIEW MENU &nbsp;→</a>
+                </div>
+              </div>
+              <div class="room-image-pane">
+                <img src="./assets/facility_dining.png" alt="Fine Dining" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Pool -->
+          <div class="slider-slide">
+            <div class="room-card-large">
+              <div class="room-info-pane">
+                <div class="room-price-info">
+                  ROOFTOP: <span class="price-val">06 AM - 08 PM</span>
+                </div>
+                <h3 class="room-name-large">Infinity Rooftop Pool</h3>
+                <p class="room-desc-large">
+                  Experience breathtaking city views from our
+                  temperature-controlled rooftop pool. The perfect spot for
+                  twilight swimming and relaxation.
+                </p>
+                <div class="room-details-grid">
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 21l-4-4" />
+                    </svg>
+                    <span>SKYLINE VIEWS</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <span>HEATED WATER</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M22 12h-4" />
+                    </svg>
+                    <span>POOLSIDE BAR</span>
+                  </div>
+                </div>
+                <div class="room-actions-large no-res">
+                  <a href="#" class="btn-view-room">RELAX BY POOL &nbsp;→</a>
+                </div>
+              </div>
+              <div class="room-image-pane">
+                <img src="./assets/facility_pool.png" alt="Infinity Pool" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="slider-arrow prev" aria-label="Previous slide">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button class="slider-arrow next" aria-label="Next slide">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- EXPLORE THE ASPIRE HOTEL -->
+    <section class="explore" id="explore">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Discover More</div>
+        <h2 class="section-title">Explore The Aspire Hotel</h2>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-cell" id="gallery-lobby">
+          <img src="./assets/hero_bg.png" alt="Lobby" />
+          <div class="gallery-label">Grand Lobby</div>
+        </div>
+        <div class="gallery-cell" id="gallery-views">
+          <img src="./assets/room_deluxe.png" alt="City Views" />
+          <div class="gallery-label">City Views</div>
+        </div>
+        <div class="gallery-cell" id="gallery-suites">
+          <img src="./assets/room_suite.png" alt="Suites" />
+          <div class="gallery-label">Premium Suites</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS & OFFERS -->
+    <section class="news-offers" id="news-offers">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Latest Updates</div>
+        <h2 class="section-title">News & Offers</h2>
+      </div>
+      <div class="offers-grid reveal">
+        <div class="offer-card" id="offer-card-1">
+          <div class="offer-badge">Limited Time</div>
+          <div class="offer-title">Early Bird Discount</div>
+          <div class="offer-desc">
+            Book 15 days in advance and get up to 20% off on all room
+            categories. A memorable stay at the best price.
+          </div>
+          <a href="#rooms" class="offer-link">Book Now →</a>
+        </div>
+        <div class="offer-card" id="offer-card-2">
+          <div class="offer-badge">Corporate</div>
+          <div class="offer-title">Business Stay Package</div>
+          <div class="offer-desc">
+            Exclusive rates for corporate travelers. Includes complimentary
+            breakfast, high-speed Wi-Fi, and express check-in.
+          </div>
+          <a href="#rooms" class="offer-link">Enquire →</a>
+        </div>
+        <div class="offer-card" id="offer-card-3">
+          <div class="offer-badge">Weekend</div>
+          <div class="offer-title">Weekend Getaway</div>
+          <div class="offer-desc">
+            Switch off and unwind. Special weekend packages with late checkout
+            and complimentary room upgrades on availability.
+          </div>
+          <a href="#rooms" class="offer-link">View Offer →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="map-section" id="map">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Find Us</div>
+        <h2 class="section-title">Our Location</h2>
+        <p class="section-sub reveal">
+          Located in the heart of Guwahati, Assam — easily accessible from the
+          airport and major landmarks.
+        </p>
+      </div>
+      <div class="map-container reveal">
+        <iframe
+          id="hotel-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57408.42095597567!2d91.7086485!3d26.1445169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5948b879f007%3A0x6f5f3e3a069a6a7b!2sGuwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="The Aspire Hotel Location - Guwahati"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <!-- PREMIUM FOOTER -->
+    <footer class="lara-footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-col brand-col">
+            <a href="#" class="footer-logo">LARITA</a>
+            <p class="brand-text">
+              Excellence in hospitality since 1970. We redefine luxury through
+              personalized experiences and architectural masterpiece in the
+              heart of the city.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">FB</a>
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="Twitter">TW</a>
+              <a href="#" aria-label="LinkedIn">LN</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">QUICK LINKS</h4>
+            <ul class="footer-nav">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#rooms">Rooms & Suites</a></li>
+              <li><a href="#services">Our Services</a></li>
+              <li><a href="#explore">Gallery</a></li>
+              <li><a href="#news-offers">News & Offers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">CONTACT US</h4>
+            <div class="contact-info">
+              <p>123 Luxury Avenue, City Center,<br />Guwahati, India</p>
+              <p class="phone">+91 1234 567 890</p>
+              <p class="email">booking@laritahotel.com</p>
+            </div>
+          </div>
+          <div class="footer-col newsletter-col">
+            <h4 class="footer-title">NEWSLETTER</h4>
+            <p>Subscribe to receive exclusive offers and luxury updates.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit">JOIN</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Larita Luxury Hotel. All Rights Reserved.</p>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main Script (Inlined for file:// compatibility) -->
+    <script>
+      // ── Generic Slider System ──
+      class SimpleSlider {
+        constructor(el, options = {}) {
+          this.el = el;
+          this.track = el.querySelector(".slider-track");
+          this.slides = Array.from(el.querySelectorAll(".slider-slide"));
+          this.dotsContainer = el.querySelector(".slider-dots");
+
+          // Look for arrows inside OR in the immediate parent (for layering fixes)
+          this.btnPrev =
+            el.querySelector(".slider-arrow.prev") ||
+            el.parentElement.querySelector(".slider-arrow.prev");
+          this.btnNext =
+            el.querySelector(".slider-arrow.next") ||
+            el.parentElement.querySelector(".slider-arrow.next");
+
+          if (!this.track || this.slides.length === 0) return;
+
+          this.currentIndex = 0;
+          this.type = el.getAttribute("data-slider"); // 'hero' or 'room-collection'
+          this.autoPlayDelay =
+            options.delay || (this.type === "hero" ? 6000 : 0);
+          this.intervalId = null;
+
+          this.init();
+        }
+
+        init() {
+          if (this.slides.length <= 1) return;
+
+          // Create dots if container exists
+          if (this.dotsContainer) {
+            this.slides.forEach((_, i) => {
+              const dot = document.createElement("button");
+              dot.classList.add("slider-dot");
+              if (i === 0) dot.classList.add("active");
+              dot.addEventListener("click", () => this.goTo(i));
+              this.dotsContainer.appendChild(dot);
+            });
+            this.dots = Array.from(
+              this.dotsContainer.querySelectorAll(".slider-dot"),
+            );
+          }
+
+          // Events
+          if (this.btnPrev)
+            this.btnPrev.addEventListener("click", () => this.prev());
+          if (this.btnNext)
+            this.btnNext.addEventListener("click", () => this.next());
+
+          // Auto play
+          if (this.autoPlayDelay > 0) {
+            this.startAutoPlay();
+            this.el.addEventListener("mouseenter", () => this.stopAutoPlay());
+            this.el.addEventListener("mouseleave", () => this.startAutoPlay());
+          }
+
+          // Touch support
+          let startX = 0;
+          this.el.addEventListener(
+            "touchstart",
+            (e) => (startX = e.touches[0].clientX),
+            { passive: true },
+          );
+          this.el.addEventListener(
+            "touchend",
+            (e) => {
+              const endX = e.changedTouches[0].clientX;
+              if (startX - endX > 50) this.next();
+              if (endX - startX > 50) this.prev();
+            },
+            { passive: true },
+          );
+        }
+
+        goTo(index) {
+          this.currentIndex = (index + this.slides.length) % this.slides.length;
+          this.track.style.transform = `translateX(-${
+            this.currentIndex * 100
+          }%)`;
+
+          // Update dots
+          if (this.dots) {
+            this.dots.forEach((dot, i) => {
+              dot.classList.toggle("active", i === this.currentIndex);
+            });
+          }
+        }
+
+        next() {
+          this.goTo(this.currentIndex + 1);
+        }
+        prev() {
+          this.goTo(this.currentIndex - 1);
+        }
+
+        startAutoPlay() {
+          this.intervalId = setInterval(() => this.next(), this.autoPlayDelay);
+        }
+
+        stopAutoPlay() {
+          clearInterval(this.intervalId);
+        }
+      }
+
+      // ── Main Initialization ──
+      document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.getElementById("main-nav");
+        const reveals = document.querySelectorAll(".reveal");
+
+        // Reveal animations
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+
+        reveals.forEach((el) => observer.observe(el));
+
+        // Sliders
+        const sliderEls = document.querySelectorAll("[data-slider]");
+        sliderEls.forEach((el) => new SimpleSlider(el));
+
+        // Scroll logic
+        window.addEventListener("scroll", () => {
+          if (!nav) return;
+          if (window.scrollY > 60) {
+            nav.classList.add("scrolled");
+          } else {
+            nav.classList.remove("scrolled");
+          }
+        });
+
+        // Mobile Menu
+        const hamburger = document.getElementById("nav-hamburger");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuOverlay = document.getElementById("mobile-menu-overlay");
+        const menuClose = document.getElementById("mobile-menu-close");
+
+        if (hamburger && mobileMenu && menuOverlay && menuClose) {
+          const openMenu = () => {
+            mobileMenu.classList.add("open");
+            menuOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+          };
+
+          const closeMenu = () => {
+            mobileMenu.classList.remove("open");
+            menuOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+          };
+
+          hamburger.addEventListener("click", openMenu);
+          menuClose.addEventListener("click", closeMenu);
+          menuOverlay.addEventListener("click", closeMenu);
+
+          document.querySelectorAll(".mobile-nav-links a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
