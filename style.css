@@ -22,13 +22,13 @@
   --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.08);
 
   /* Fluid Sizing & Typography */
-  --space-unit: clamp(1rem, 2vw, 2rem);
-  --section-padding: clamp(60px, 10vw, 120px);
-  --container-px: clamp(24px, 5vw, 64px);
+  --space-unit: clamp(0.75rem, 2vw, 2rem);
+  --section-padding: clamp(40px, 8vw, 120px);
+  --container-px: clamp(16px, 5vw, 64px);
 
-  --h1-size: clamp(40px, 8vw, 90px);
-  --h2-size: clamp(32px, 5vw, 56px);
-  --h3-size: clamp(24px, 3vw, 32px);
+  --h1-size: clamp(32px, 8vw, 90px);
+  --h2-size: clamp(28px, 5vw, 56px);
+  --h3-size: clamp(22px, 3vw, 32px);
   --body-size: clamp(14px, 1.1vw, 16px);
 }
 
@@ -1713,21 +1713,11 @@ footer {
   .room-image-pane {
     min-height: 350px;
     order: -1;
+    flex-basis: auto;
   }
   .room-info-pane {
     flex-basis: auto;
-  }
-}
-
-/* ── MOBILE & ZOOM OPTIMIZATION ── */
-@media (max-width: 1100px) {
-  .room-card-large {
-    flex-direction: column;
-  }
-  .room-image-pane {
-    flex-basis: auto;
-    min-height: 400px;
-    order: -1;
+    padding: 32px 24px;
   }
 }
 
@@ -1748,11 +1738,11 @@ footer {
   .features-grid {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 32px;
   }
 
   .feature-item {
-    flex: 1 1 200px;
+    flex: 1 1 240px;
   }
   .nav-hamburger span {
     background: var(--text-main);
@@ -1762,11 +1752,14 @@ footer {
   }
 
   .welcome-visuals {
-    min-height: 400px;
+    min-height: auto;
+    gap: 12px;
   }
   .img-stagger-1,
   .img-stagger-2 {
-    height: 350px;
+    height: clamp(250px, 40vw, 400px);
+    transform: none;
+    width: 50%;
   }
 
   .gallery-grid {
@@ -1777,16 +1770,30 @@ footer {
     height: 300px;
   }
 
-  .collection-slider .slider-slide {
-    padding: 0 40px;
-  }
   .collection-slider .slider-arrow {
+    width: 44px;
+    height: 44px;
     background: #fff;
     box-shadow: var(--shadow-sm);
+    top: auto !important;
+    bottom: 20px !important; /* Move to bottom of the padded area */
+    transform: none !important;
+  }
+  .collection-slider .slider-arrow.prev { left: calc(50% - 60px) !important; }
+  .collection-slider .slider-arrow.next { right: calc(50% - 60px) !important; }
+
+  .collection-slider {
+    margin-bottom: 40px;
+    padding-bottom: 80px !important; /* Add space for the arrows within the overflow area */
+    overflow: hidden; 
+  }
+
+  .collection-slider .slider-slide {
+    padding: 0 16px;
   }
 
   .facilities-visual {
-    height: 400px;
+    height: 350px;
     width: 100%;
   }
 }
@@ -1818,6 +1825,16 @@ footer {
 @media (max-width: 480px) {
   .room-details-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .room-actions-large {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .room-actions-large .btn-book-now,
+  .room-actions-large .btn-view-room {
+    width: 100%;
+    justify-content: center;
   }
   .footer-bottom {
     flex-direction: column;
@@ -1827,6 +1844,14 @@ footer {
   .legal-links {
     justify-content: center;
     gap: 16px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .footer-links {
+    align-items: center;
   }
 }
 
@@ -2147,12 +2172,15 @@ footer {
   }
   .details-grid {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 40px;
   }
   .details-sidebar {
     position: static;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
+  }
+  .booking-card {
+    padding: 32px 24px;
   }
 }
 
@@ -2161,10 +2189,12 @@ footer {
     grid-template-columns: 1fr;
   }
   .details-stats {
-    gap: 32px;
+    gap: 24px;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
   }
   .stat-box {
-    flex: 1 1 40%;
+    flex: 1 1 calc(50% - 12px);
   }
 }
 
