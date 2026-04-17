@@ -144,9 +144,11 @@ nav.scrolled .nav-logo {
   color: var(--text-main);
 }
 
-.nav-logo svg {
+.nav-logo svg,
+.nav-logo .ph {
   width: 28px !important;
   height: 28px !important;
+  font-size: 28px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
@@ -299,6 +301,12 @@ nav.scrolled .nav-hamburger span {
 
 .mobile-nav-links a:hover {
   color: var(--gold);
+}
+
+/* Phosphor Icons Base Style */
+.ph {
+  vertical-align: middle;
+  line-height: 1;
 }
 
 .mobile-menu-overlay {
@@ -699,9 +707,11 @@ nav.scrolled .nav-hamburger span {
   transition: transform 0.4s ease;
 }
 
-.feature-icon svg {
+.feature-icon svg,
+.feature-icon .ph {
   width: 56px !important;
   height: 56px !important;
+  font-size: 56px;
   display: block;
 }
 
@@ -1163,9 +1173,11 @@ footer {
   color: #34e0a1; /* TripAdvisor Green */
 }
 
-.rating-logo svg {
+.rating-logo svg,
+.rating-logo .ph {
   width: 32px !important;
   height: 32px !important;
+  font-size: 32px;
   display: block;
 }
 
@@ -1304,9 +1316,11 @@ footer {
   gap: 12px;
 }
 
-.detail-item svg {
+.detail-item svg,
+.detail-item .ph {
   width: 22px !important;
   height: 22px !important;
+  font-size: 22px;
   color: var(--gold);
   opacity: 0.8;
   flex-shrink: 0;
@@ -1417,9 +1431,11 @@ footer {
   right: 0;
 }
 
-.collection-slider .slider-arrow svg {
+.collection-slider .slider-arrow svg,
+.collection-slider .slider-arrow .ph {
   width: 24px;
   height: 24px;
+  font-size: 24px;
 }
 
 .facilities-section {
