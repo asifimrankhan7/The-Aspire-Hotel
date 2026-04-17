@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Details – The Aspire Hotel</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- NAV (Glassmorphism) -->
+    <nav id="main-nav" class="scrolled">
+      <a href="./index.html#home" class="nav-logo">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle
+            cx="14"
+            cy="14"
+            r="12"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <path
+            d="M8 14 C8 10 11 8 14 8 C17 8 20 10 20 14"
+            stroke="currentColor"
+            stroke-width="1"
+            fill="none"
+          />
+          <line
+            x1="14"
+            y1="8"
+            x2="14"
+            y2="20"
+            stroke="currentColor"
+            stroke-width="1"
+          />
+        </svg>
+        The Aspire Hotel
+      </a>
+      <ul class="nav-links">
+        <li><a href="./index.html#home">Home</a></li>
+        <li><a href="./index.html#rooms">Rooms</a></li>
+        <li><a href="./index.html#explore">Explore</a></li>
+        <li><a href="./index.html#news-offers">News & Offers</a></li>
+        <li><a href="./index.html#contact">Contact Us</a></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div class="mobile-menu" id="mobile-menu">
+      <button
+        class="mobile-menu-close"
+        id="mobile-menu-close"
+        aria-label="Close menu"
+      >
+        ✕
+      </button>
+      <ul class="mobile-nav-links">
+        <li><a href="./index.html#home">Home</a></li>
+        <li><a href="./index.html#rooms">Rooms</a></li>
+        <li><a href="./index.html#explore">Explore</a></li>
+        <li><a href="./index.html#news-offers">News & Offers</a></li>
+        <li><a href="./index.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <!-- HERO SECTION -->
+    <section class="details-hero">
+      <img
+        src=""
+        id="details-hero-img"
+        alt="Room Hero"
+        class="details-hero-img"
+      />
+      <div class="details-hero-overlay">
+        <span class="details-room-price" id="room-price-info"
+          >Starting From <span id="room-price-val"></span> / Night</span
+        >
+        <h1 class="details-room-name" id="room-name">Loading...</h1>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="details-main">
+      <div class="details-grid">
+        <div class="details-content">
+          <div class="reveal">
+            <span class="amenities-eyebrow">ABOUT THE ROOM</span>
+            <h2 class="title">Luxury and comfort redefined.</h2>
+            <p class="details-desc" id="details-desc"></p>
+          </div>
+
+          <!-- Room Stats -->
+          <div class="details-stats reveal">
+            <div class="stat-box">
+              <span class="label">Size</span>
+              <span class="value" id="stat-size"></span>
+            </div>
+            <div class="stat-box">
+              <span class="label">Beds</span>
+              <span class="value" id="stat-beds"></span>
+            </div>
+            <div class="stat-box">
+              <span class="label">Guests</span>
+              <span class="value" id="stat-guests"></span>
+            </div>
+            <div class="stat-box">
+              <span class="label">View</span>
+              <span class="value" id="stat-view"></span>
+            </div>
+          </div>
+
+          <!-- Room Amenities -->
+          <div class="amenities-container">
+            <div class="amenities-header reveal">
+              <span class="amenities-eyebrow">PREMIUM FACILITIES</span>
+              <h3 class="amenities-title">Room Amenities</h3>
+            </div>
+            <div class="amenities-grid" id="room-amenities-grid">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Hotel Amenities -->
+          <div class="amenities-container">
+            <div class="amenities-header reveal">
+              <span class="amenities-eyebrow">HOTEL SERVICES</span>
+              <h3 class="amenities-title">Hotel Amenities</h3>
+            </div>
+            <div class="amenities-grid" id="hotel-amenities-grid">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- DIRECT GALLERY GRID VIEW (Full Width) -->
+    <section class="details-gallery reveal">
+      <div class="gallery-header-new">
+        <span class="section-eyebrow">VISUAL EXPERIENCE</span>
+        <h2 class="section-title">Room & Hotel Gallery</h2>
+      </div>
+      <div class="gallery-grid-new" id="gallery-grid">
+        <!-- Dynamically populated -->
+      </div>
+    </section>
+
+    <!-- FOOTER (Simplified) -->
+    <footer
+      style="padding: 60px 0; background: #000; color: #fff; text-align: center"
+    >
+      <p style="font-size: 11px; letter-spacing: 2px; opacity: 0.5">
+        &copy; 2026 THE ASPIRE HOTEL. ALL RIGHTS RESERVED.
+      </p>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <button class="lightbox-prev">&lsaquo;</button>
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Gallery Image" />
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+      </div>
+      <button class="lightbox-next">&rsaquo;</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./roomsData.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
