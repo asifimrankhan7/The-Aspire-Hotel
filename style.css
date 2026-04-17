@@ -1795,13 +1795,17 @@ footer {
     bottom: 20px !important; /* Move to bottom of the padded area */
     transform: none !important;
   }
-  .collection-slider .slider-arrow.prev { left: calc(50% - 60px) !important; }
-  .collection-slider .slider-arrow.next { right: calc(50% - 60px) !important; }
+  .collection-slider .slider-arrow.prev {
+    left: calc(50% - 60px) !important;
+  }
+  .collection-slider .slider-arrow.next {
+    right: calc(50% - 60px) !important;
+  }
 
   .collection-slider {
     margin-bottom: 40px;
     padding-bottom: 80px !important; /* Add space for the arrows within the overflow area */
-    overflow: hidden; 
+    overflow: hidden;
   }
 
   .collection-slider .slider-slide {
