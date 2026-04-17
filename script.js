@@ -198,13 +198,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ── Room Details Population ──
-  const isDetailsPage = window.location.pathname.includes('room-details.html');
+  const isDetailsPage = window.location.href.includes('room-details');
   let currentRoomData = null;
 
   if (isDetailsPage) {
     const params = new URLSearchParams(window.location.search);
-    const roomType = params.get('type');
+    const roomType = params.get('type') || 'royale'; // Fallback to royale
     currentRoomData = window.roomsData ? window.roomsData[roomType] : null;
+
+    if (!currentRoomData && window.roomsData) {
+        // If the specific type is not found, try to find any available room
+        const availableTypes = Object.keys(window.roomsData);
+        if (availableTypes.length > 0) {
+            currentRoomData = window.roomsData[availableTypes[0]];
+        }
+    }
 
     if (currentRoomData) {
       document.title = `${currentRoomData.name} – The Aspire Hotel`;

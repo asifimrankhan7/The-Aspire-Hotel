@@ -9,9 +9,9 @@ const roomsData = {
     view: "Street View",
     gallery: [
       { url: "./assets/hero_1.png", title: "Royale Suite Main" },
-      { url: "file:///Users/asifimrankhan/.gemini/antigravity/brain/25294ca1-02c7-43f1-b9d2-5be7e21aaf0c/royale_room_interior_1776404584893.png", title: "Boutique Interiors" },
-      { url: "file:///Users/asifimrankhan/.gemini/antigravity/brain/25294ca1-02c7-43f1-b9d2-5be7e21aaf0c/royale_room_bathroom_1776404599894.png", title: "Modern Bathroom" },
-      { url: "file:///Users/asifimrankhan/.gemini/antigravity/brain/25294ca1-02c7-43f1-b9d2-5be7e21aaf0c/royale_washroom_v2_1776404808137.png", title: "Premium Washroom" }
+      { url: "./assets/royale_room_gallery.png", title: "Boutique Interiors" },
+      { url: "./assets/room_royale_2.png", title: "Modern Bedroom" },
+      { url: "./assets/washroom_gallery.png", title: "Premium Washroom" }
     ],
     roomAmenities: [
       { name: "Free High-speed Wi-Fi", icon: "wifi" },
@@ -48,8 +48,9 @@ const roomsData = {
     view: "City View",
     gallery: [
       { url: "./assets/room_deluxe_coll.png", title: "Premium Suite Main" },
-      { url: "file:///Users/asifimrankhan/.gemini/antigravity/brain/25294ca1-02c7-43f1-b9d2-5be7e21aaf0c/premium_room_interior_1776404613752.png", title: "Modern Luxury Decor" },
-      { url: "file:///Users/asifimrankhan/.gemini/antigravity/brain/25294ca1-02c7-43f1-b9d2-5be7e21aaf0c/premium_room_bathtub_1776404632518.png", title: "Skyline Bathtub" }
+      { url: "./assets/premium_room_gallery.png", title: "Modern Luxury Decor" },
+      { url: "./assets/room_premium_2.png", title: "Elegant Interiors" },
+      { url: "./assets/washroom_gallery.png", title: "Skyline Bathtub" }
     ],
     roomAmenities: [
       { name: "Free High-speed Wi-Fi", icon: "wifi" },
@@ -85,9 +86,11 @@ const roomsData = {
     guests: "4 Adults",
     view: "Skyline View",
     gallery: [
-      { url: "file:///Users/asifimrankhan/.gemini/antigravity/brain/25294ca1-02c7-43f1-b9d2-5be7e21aaf0c/deluxe_suite_interior_1776404647052.png", title: "Deluxe Presidential Suite" },
-      { url: "file:///Users/asifimrankhan/.gemini/antigravity/brain/25294ca1-02c7-43f1-b9d2-5be7e21aaf0c/deluxe_suite_dining_1776404661870.png", title: "Dining & Living Area" },
-      { url: "file:///Users/asifimrankhan/.gemini/antigravity/brain/25294ca1-02c7-43f1-b9d2-5be7e21aaf0c/deluxe_suite_jacuzzi_v2_1776404732501.png", title: "Private Jacuzzi" }
+      { url: "./assets/room_suite_coll.png", title: "Deluxe Presidential Suite" },
+      { url: "./assets/deluxe_room_gallery.png", title: "Dining & Living Area" },
+      { url: "./assets/room_deluxe.png", title: "Master Bedroom" },
+      { url: "./assets/room_deluxe_2.png", title: "Lounge Area" },
+      { url: "./assets/washroom_gallery.png", title: "Private Jacuzzi" }
     ],
     roomAmenities: [
       { name: "Free Ultra-high-speed Wi-Fi", icon: "wifi" },
@@ -121,3 +124,4 @@ if (typeof module !== 'undefined' && module.exports) {
 } else {
   window.roomsData = roomsData;
 }
+
