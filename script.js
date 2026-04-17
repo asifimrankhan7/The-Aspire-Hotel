@@ -134,7 +134,27 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       nav.classList.remove("scrolled");
     }
+
+    // Back to top visibility
+    const backToTopBtn = document.getElementById("back-to-top");
+    if (backToTopBtn) {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add("visible");
+      } else {
+        backToTopBtn.classList.remove("visible");
+      }
+    }
   });
+
+  const backToTopBtn = document.getElementById("back-to-top");
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
 
   // ── Section Navbar Tracking (Clone logic) ──
   const sectionTabs = document.querySelectorAll(".section-tab");
