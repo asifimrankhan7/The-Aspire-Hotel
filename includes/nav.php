@@ -1,11 +1,13 @@
 <?php
-// $navPage: 'home' (default) or 'details'
+// $navPage: 'home' (default), 'details', or 'contact'
 // 'home'    → anchor links on the same page
 // 'details' → links pointing back to index.php
+// 'contact' → links pointing to appropriate pages
 $navPage  = $navPage  ?? 'home';
 $navClass = $navClass ?? '';
 
-$base = ($navPage === 'details') ? './index.php' : '';
+$base = ($navPage === 'details' || $navPage === 'contact') ? './index.php' : '';
+$contactLink = ($navPage === 'contact') ? './contact.php' : './contact.php';
 ?>
 <!-- NAV -->
 <nav id="main-nav"<?= $navClass ? ' class="' . $navClass . '"' : '' ?>>
@@ -19,7 +21,7 @@ $base = ($navPage === 'details') ? './index.php' : '';
     <li><a href="<?= $base ?>#explore">Explore</a></li>
     <li><a href="<?= $base ?>#news-offers">News &amp; Offers</a></li>
     <li><a href="<?= $base ?>#map">Map</a></li>
-    <li><a href="<?= $base ?>#contact">Contact Us</a></li>
+    <li><a href="./contact.php">Contact Us</a></li>
   </ul>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -35,7 +37,7 @@ $base = ($navPage === 'details') ? './index.php' : '';
     <li><a href="<?= $base ?>#explore">Explore</a></li>
     <li><a href="<?= $base ?>#news-offers">News &amp; Offers</a></li>
     <li><a href="<?= $base ?>#map">Map</a></li>
-    <li><a href="<?= $base ?>#contact">Contact Us</a></li>
+    <li><a href="./contact.php">Contact Us</a></li>
   </ul>
   <a href="<?= $base ?>#rooms" class="nav-btn" style="margin-top:40px;display:inline-block">Reservation</a>
 </div>
