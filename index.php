@@ -157,7 +157,7 @@ require_once __DIR__ . '/includes/head.php';
               <div class="detail-item"><i class="ph ph-coffee"></i><span>BREAKFAST INCLUDED</span></div>
             </div>
             <div class="room-actions-large">
-              <a href="#contact" class="btn-book-now"><i class="ph ph-calendar-check"></i>BOOK NOW</a>
+              <a href="./room-details.php?type=royale" class="btn-book-now"><i class="ph ph-calendar-check"></i>BOOK NOW</a>
               <a href="./room-details.php?type=royale" class="btn-view-room">VIEW DETAILS &nbsp;→</a>
             </div>
           </div>
@@ -187,7 +187,7 @@ require_once __DIR__ . '/includes/head.php';
               <div class="detail-item"><i class="ph ph-coffee"></i><span>BREAKFAST INCLUDED</span></div>
             </div>
             <div class="room-actions-large">
-              <a href="#contact" class="btn-book-now"><i class="ph ph-calendar-check"></i>BOOK NOW</a>
+              <a href="./room-details.php?type=premium" class="btn-book-now"><i class="ph ph-calendar-check"></i>BOOK NOW</a>
               <a href="./room-details.php?type=premium" class="btn-view-room">VIEW DETAILS &nbsp;→</a>
             </div>
           </div>
@@ -217,7 +217,7 @@ require_once __DIR__ . '/includes/head.php';
               <div class="detail-item"><i class="ph ph-coffee"></i><span>BREAKFAST INCLUDED</span></div>
             </div>
             <div class="room-actions-large">
-              <a href="#contact" class="btn-book-now"><i class="ph ph-calendar-check"></i>BOOK NOW</a>
+              <a href="./room-details.php?type=deluxe" class="btn-book-now"><i class="ph ph-calendar-check"></i>BOOK NOW</a>
               <a href="./room-details.php?type=deluxe" class="btn-view-room">VIEW DETAILS &nbsp;→</a>
             </div>
           </div>
