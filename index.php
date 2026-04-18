@@ -66,12 +66,8 @@ require_once __DIR__ . '/includes/head.php';
   <div class="welcome-container">
 
     <div class="welcome-visuals reveal">
-      <div class="img-stagger-1">
-        <img src="./assets/images/about_1.png" alt="Lobby interior" />
-      </div>
-      <div class="img-stagger-2">
+      <div class="welcome-image-single">
         <img src="./assets/images/about_2.png" alt="Luxury room" />
-        <div class="img-accent"></div>
       </div>
     </div>
 

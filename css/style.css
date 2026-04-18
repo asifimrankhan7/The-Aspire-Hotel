@@ -911,38 +911,22 @@ nav.scrolled .nav-hamburger span {
 }
 
 .welcome-visuals {
-  flex: 1 1 500px;
+  flex: 1 1 400px;
   position: relative;
   display: flex;
-  gap: 20px;
-  min-height: clamp(350px, 40vw, 600px);
+  align-items: center;
+  justify-content: center;
 }
 
-.img-stagger-1 {
-  width: 45%;
-  height: 450px;
-  transform: translateY(50px);
-}
-
-.img-stagger-2 {
-  width: 55%;
-  height: 550px;
-}
-
-.welcome-visuals img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-md);
-}
-
-/* Gold corner accent on the front image */
-.img-stagger-2 {
+.welcome-image-single {
+  width: 85%;
+  height: auto;
   position: relative;
+  margin: 0 auto;
 }
 
-.img-accent {
+.welcome-image-single::after {
+  content: '';
   position: absolute;
   bottom: -16px;
   right: -16px;
@@ -951,7 +935,18 @@ nav.scrolled .nav-hamburger span {
   border: 2px solid var(--gold);
   border-radius: var(--radius-sm);
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.welcome-visuals img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  display: block;
 }
 
 .welcome-content {
@@ -2345,14 +2340,14 @@ nav.scrolled .nav-hamburger span {
   /* Welcome visuals */
   .welcome-visuals {
     min-height: auto;
-    gap: 12px;
   }
 
-  .img-stagger-1,
-  .img-stagger-2 {
-    height: clamp(250px, 40vw, 400px);
-    transform: none;
-    width: 50%;
+  .welcome-image-single {
+    width: 100%;
+  }
+
+  .welcome-visuals img {
+    max-height: 400px;
   }
 
   /* Bento gallery */
@@ -2503,22 +2498,21 @@ nav.scrolled .nav-hamburger span {
     justify-content: center;
   }
 
-  /* Welcome visuals: stack images on mobile */
+  /* Welcome visuals: single image on mobile */
   .welcome-visuals {
-    flex-direction: column;
     min-height: auto;
-    gap: 12px;
   }
 
-  .img-stagger-1,
-  .img-stagger-2 {
+  .welcome-image-single {
     width: 100%;
-    height: clamp(220px, 55vw, 320px);
-    transform: none !important;
   }
 
-  .img-accent {
+  .welcome-image-single::after {
     display: none;
+  }
+
+  .welcome-visuals img {
+    max-height: 300px;
   }
 
   /* Features: single column */
