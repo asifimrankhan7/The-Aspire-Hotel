@@ -118,7 +118,7 @@ require_once __DIR__ . '/includes/head.php';
 <section class="rooms" id="rooms">
   <div class="rooms-header reveal">
     <span class="eyebrow">EXQUISITE AND LUXURIOUS</span>
-    <h2 class="title">Room and suite collection</h2>
+    <h2 class="title section-title">Room and suite collection</h2>
   </div>
 
   <div class="collection-slider embla reveal" id="rooms-slider">
@@ -215,8 +215,8 @@ require_once __DIR__ . '/includes/head.php';
 <!-- FACILITIES -->
 <section class="rooms" id="services">
   <div class="rooms-header reveal">
-    <span class="section-eyebrow">FACILITIES AND SERVICES</span>
-    <h2 class="section-title">Discover our services</h2>
+    <span class="eyebrow">FACILITIES AND SERVICES</span>
+    <h2 class="title section-title">Discover our services</h2>
   </div>
 
   <div class="collection-slider embla reveal" id="facilities-slider">
