@@ -96,7 +96,7 @@ require_once __DIR__ . '/includes/head.php';
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .form-group label {
@@ -105,35 +105,48 @@ require_once __DIR__ . '/includes/head.php';
   text-transform: uppercase;
   font-weight: 600;
   color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group label .ph {
+  font-size: 20px;
+  color: var(--gold);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 16px 20px;
+  padding: 18px 20px;
   border: 1px solid var(--glass-border);
   font-family: var(--font-sans);
   font-size: 15px;
   color: var(--text-main);
   background: var(--ink-inv);
-  transition: border-color var(--t-base);
+  transition: border-color var(--t-base), box-shadow var(--t-base);
   outline: none;
+  width: 100%;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-muted);
 }
 
 .form-group textarea {
-  min-height: 120px;
+  min-height: 140px;
   resize: vertical;
 }
 
 .contact-form .btn-primary {
   width: 100%;
   margin-top: 8px;
+  padding: 20px;
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 
 /* Info Side */
@@ -143,16 +156,37 @@ require_once __DIR__ . '/includes/head.php';
   gap: 40px;
 }
 
-.contact-info-block h3 {
+.contact-info-block {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-info-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gold-muted);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-icon .ph {
+  font-size: 24px;
+  color: var(--gold);
+}
+
+.contact-info-content h3 {
   font-family: var(--font-serif);
   font-size: 22px;
   font-weight: 400;
   color: var(--ink);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
-.contact-info-block p,
-.contact-info-block a {
+.contact-info-content p,
+.contact-info-content a {
   font-size: 15px;
   color: var(--text-muted);
   line-height: 1.8;
@@ -160,22 +194,20 @@ require_once __DIR__ . '/includes/head.php';
   transition: color var(--t-base);
 }
 
-.contact-info-block a:hover {
+.contact-info-content a:hover {
   color: var(--gold);
 }
 
 .contact-divider {
-  width: 40px;
+  width: 100%;
   height: 1px;
-  background: var(--gold);
-  opacity: 0.5;
+  background: var(--glass-border);
 }
 
 /* Simple social links */
 .contact-social {
   display: flex;
   gap: 16px;
-  margin-top: 8px;
 }
 
 .contact-social a {
@@ -218,12 +250,26 @@ require_once __DIR__ . '/includes/head.php';
 }
 
 @media (max-width: 600px) {
-  .contact-section {
+  .contact-hero {
     padding-top: 100px;
+    min-height: 45vh;
   }
   
   .contact-form-wrapper {
     padding: 24px;
+  }
+  
+  .contact-info-block {
+    gap: 16px;
+  }
+  
+  .contact-info-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-info-icon .ph {
+    font-size: 20px;
   }
 }
 </style>
@@ -252,20 +298,20 @@ require_once __DIR__ . '/includes/nav.php';
     <div class="contact-grid reveal">
       
       <!-- Form -->
-      <div class="contact-form-wrapper reveal">
+      <div class="contact-form-wrapper">
         <form class="contact-form" method="post" action="#">
           <div class="form-group">
-            <label for="name">Full Name</label>
+            <label for="name"><i class="ph ph-user"></i> Full Name</label>
             <input type="text" id="name" name="name" placeholder="John Doe" required>
           </div>
           
           <div class="form-group">
-            <label for="email">Email Address</label>
+            <label for="email"><i class="ph ph-envelope"></i> Email Address</label>
             <input type="email" id="email" name="email" placeholder="john@example.com" required>
           </div>
           
           <div class="form-group">
-            <label for="subject">Subject</label>
+            <label for="subject"><i class="ph ph-chat-circle-text"></i> Subject</label>
             <select id="subject" name="subject" required>
               <option value="">Select a subject</option>
               <option value="reservation">Room Reservation</option>
@@ -277,51 +323,74 @@ require_once __DIR__ . '/includes/nav.php';
           </div>
           
           <div class="form-group">
-            <label for="message">Message</label>
+            <label for="message"><i class="ph ph-pencil-simple"></i> Message</label>
             <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
           </div>
           
-          <button type="submit" class="btn-primary">SEND MESSAGE →</button>
+          <button type="submit" class="btn-primary"><i class="ph ph-paper-plane-right" style="margin-right: 10px;"></i>SEND MESSAGE</button>
         </form>
       </div>
       
       <!-- Info -->
-      <div class="contact-info reveal">
+      <div class="contact-info">
         
         <div class="contact-info-block">
-          <h3>Location</h3>
-          <p>
-            123 Luxury Avenue, City Center<br>
-            Guwahati, Assam 781001<br>
-            India
-          </p>
+          <div class="contact-info-icon">
+            <i class="ph ph-map-pin"></i>
+          </div>
+          <div class="contact-info-content">
+            <h3>Location</h3>
+            <p>
+              123 Luxury Avenue, City Center<br>
+              Guwahati, Assam 781001<br>
+              India
+            </p>
+          </div>
         </div>
         
         <div class="contact-divider"></div>
         
         <div class="contact-info-block">
-          <h3>Contact</h3>
-          <p>
-            <a href="tel:+911234567890">+91 1234 567 890</a><br>
-            <a href="mailto:booking@theaspirehotel.com">booking@theaspirehotel.com</a>
-          </p>
+          <div class="contact-info-icon">
+            <i class="ph ph-phone"></i>
+          </div>
+          <div class="contact-info-content">
+            <h3>Contact</h3>
+            <p>
+              <a href="tel:+911234567890">+91 1234 567 890</a><br>
+              <a href="mailto:booking@theaspirehotel.com">booking@theaspirehotel.com</a>
+            </p>
+          </div>
         </div>
         
         <div class="contact-divider"></div>
         
         <div class="contact-info-block">
-          <h3>Hours</h3>
-          <p>
-            Front Desk: 24 Hours<br>
-            Check-in: 2:00 PM<br>
-            Check-out: 12:00 PM
-          </p>
+          <div class="contact-info-icon">
+            <i class="ph ph-clock"></i>
+          </div>
+          <div class="contact-info-content">
+            <h3>Hours</h3>
+            <p>
+              Front Desk: 24 Hours<br>
+              Check-in: 2:00 PM<br>
+              Check-out: 12:00 PM
+            </p>
+          </div>
         </div>
         
-        <div class="contact-social">
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
+        <div class="contact-info-block">
+          <div class="contact-info-icon">
+            <i class="ph ph-share-network"></i>
+          </div>
+          <div class="contact-info-content">
+            <h3>Follow Us</h3>
+            <div class="contact-social">
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">Twitter</a>
+            </div>
+          </div>
         </div>
         
       </div>
