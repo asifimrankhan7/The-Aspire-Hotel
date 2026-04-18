@@ -3,199 +3,100 @@
 <head>
 <?php
 $pageTitle       = 'Contact Us – The Aspire Hotel';
-$pageDescription = 'Get in touch with The Aspire Hotel. Book your stay, inquire about our services, or reach out for any questions. We are here to help you.';
+$pageDescription = 'Get in touch with The Aspire Hotel. Book your stay or inquire about our services.';
 require_once __DIR__ . '/includes/head.php';
 ?>
 <style>
 /* ════════════════════════════════════════════════════════
-   CONTACT PAGE SPECIFIC STYLES
+   CONTACT PAGE — CLEAN & MINIMAL
 ════════════════════════════════════════════════════════ */
 
-/* ── Hero Section ── */
+/* ── Hero ── */
 .contact-hero {
-  min-height: 60vh;
+  min-height: 55vh;
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 120px var(--container-px) 60px;
+  background: #0a0a0a;
   overflow: hidden;
-  padding-top: 120px;
-  padding-bottom: 60px;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
 }
 
 .contact-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(201, 169, 98, 0.08) 0%, transparent 50%),
-              radial-gradient(ellipse at 70% 80%, rgba(201, 169, 98, 0.05) 0%, transparent 40%);
+  background: radial-gradient(ellipse at 50% 50%, rgba(201, 169, 98, 0.1) 0%, transparent 60%);
   pointer-events: none;
 }
 
 .contact-hero-content {
   position: relative;
-  z-index: var(--z-raised);
-  text-align: center;
-  color: var(--ink-inv);
-  max-width: 800px;
-  padding: 0 var(--container-px);
-  animation: fadeUp 1.4s var(--ease-out) both;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.contact-hero .eyebrow {
+  margin-bottom: var(--space-6);
+  color: var(--gold);
 }
 
 .contact-hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(36px, 6vw, 72px);
+  font-size: clamp(40px, 6vw, 64px);
   font-weight: 400;
   color: var(--ink-inv);
-  letter-spacing: clamp(4px, 1vw, 8px);
+  letter-spacing: 2px;
   text-transform: uppercase;
+  margin-bottom: var(--space-5);
   line-height: 1.1;
-  margin-bottom: var(--space-6);
 }
 
 .contact-hero-subtitle {
+  font-size: 16px;
   color: var(--white-a70);
-  font-size: clamp(14px, 1.5vw, 18px);
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  max-width: 520px;
-  margin: 0 auto var(--space-10);
   line-height: 1.7;
+  font-weight: 300;
 }
 
-/* ── Contact Info Bar ── */
-.contact-info-bar {
-  background: var(--ink-inv);
-  padding: var(--space-10) var(--container-px);
-  border-bottom: 1px solid var(--glass-border);
-}
-
-.contact-info-grid {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-8);
-}
-
-.contact-info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-5);
-  padding: var(--space-6);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
-  transition: border-color var(--t-base) var(--ease-smooth),
-              transform var(--t-base) var(--ease-smooth),
-              box-shadow var(--t-base) var(--ease-smooth);
-}
-
-.contact-info-item:hover {
-  border-color: var(--gold);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-gold-sm);
-}
-
-.contact-info-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--gold-muted);
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: var(--gold);
-  font-size: 22px;
-  transition: background var(--t-base), color var(--t-base);
-}
-
-.contact-info-item:hover .contact-info-icon {
-  background: var(--gold);
-  color: var(--ink-inv);
-}
-
-.contact-info-content h3 {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: var(--space-2);
-}
-
-.contact-info-content p,
-.contact-info-content a {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.6;
-  text-decoration: none;
-  transition: color var(--t-base);
-}
-
-.contact-info-content a:hover {
-  color: var(--gold);
-}
-
-/* ── Main Contact Section ── */
-.contact-main {
-  background: var(--base);
+/* ── Main Section ── */
+.contact-section {
   padding: var(--section-padding) var(--container-px);
+  background: var(--base);
 }
 
-.contact-grid {
-  max-width: 1400px;
+.contact-container {
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Two Column Layout */
+.contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: start;
 }
 
-/* ── Contact Form ── */
+/* Form */
 .contact-form-wrapper {
   background: var(--ink-inv);
   border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
   padding: 48px;
-  box-shadow: var(--shadow-sm);
-}
-
-.contact-form-header {
-  margin-bottom: var(--space-10);
-}
-
-.contact-form-header h2 {
-  font-family: var(--font-serif);
-  font-size: var(--h3);
-  font-weight: 400;
-  color: var(--ink);
-  margin-bottom: var(--space-4);
-}
-
-.contact-form-header p {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.6;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-6);
+  gap: 24px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-6);
+  gap: 8px;
 }
 
 .form-group label {
@@ -211,12 +112,11 @@ require_once __DIR__ . '/includes/head.php';
 .form-group textarea {
   padding: 16px 20px;
   border: 1px solid var(--glass-border);
-  border-radius: var(--radius-sm);
   font-family: var(--font-sans);
   font-size: 15px;
   color: var(--text-main);
   background: var(--ink-inv);
-  transition: border-color var(--t-base), box-shadow var(--t-base);
+  transition: border-color var(--t-base);
   outline: none;
 }
 
@@ -224,192 +124,106 @@ require_once __DIR__ . '/includes/head.php';
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--gold);
-  box-shadow: 0 0 0 3px var(--gold-muted);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--text-muted);
-  opacity: 0.6;
 }
 
 .form-group textarea {
-  min-height: 140px;
+  min-height: 120px;
   resize: vertical;
 }
 
 .contact-form .btn-primary {
   width: 100%;
-  padding: 18px 32px;
-  font-size: 12px;
-  letter-spacing: 3px;
-  margin-top: var(--space-4);
+  margin-top: 8px;
 }
 
-/* ── Contact Sidebar ── */
-.contact-sidebar {
+/* Info Side */
+.contact-info {
   display: flex;
   flex-direction: column;
-  gap: var(--space-10);
+  gap: 40px;
 }
 
-.contact-sidebar-block {
-  background: var(--ink-inv);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  box-shadow: var(--shadow-sm);
-}
-
-.contact-sidebar-block h3 {
+.contact-info-block h3 {
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400;
   color: var(--ink);
-  margin-bottom: var(--space-6);
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
+  margin-bottom: 20px;
 }
 
-.contact-sidebar-block h3 .ph {
-  color: var(--gold);
-  font-size: 28px;
-}
-
-.quick-contact-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-}
-
-.quick-contact-list li {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
+.contact-info-block p,
+.contact-info-block a {
   font-size: 15px;
   color: var(--text-muted);
-}
-
-.quick-contact-list li .ph {
-  color: var(--gold);
-  font-size: 20px;
-  flex-shrink: 0;
-}
-
-.quick-contact-list li a {
-  color: var(--text-main);
+  line-height: 1.8;
   text-decoration: none;
-  font-weight: 500;
   transition: color var(--t-base);
 }
 
-.quick-contact-list li a:hover {
+.contact-info-block a:hover {
   color: var(--gold);
 }
 
-/* Social Links */
+.contact-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+/* Simple social links */
 .contact-social {
   display: flex;
-  gap: var(--space-4);
-  margin-top: var(--space-6);
+  gap: 16px;
+  margin-top: 8px;
 }
 
 .contact-social a {
-  width: 44px;
-  height: 44px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 12px;
+  letter-spacing: 1px;
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  transition: border-color var(--t-base), 
-              color var(--t-base), 
-              background var(--t-base),
-              transform var(--t-base);
+  transition: color var(--t-base);
 }
 
 .contact-social a:hover {
-  border-color: var(--gold);
   color: var(--gold);
-  background: var(--gold-muted);
-  transform: translateY(-2px);
 }
 
-/* Operating Hours */
-.operating-hours {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.operating-hours li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-4) 0;
-  border-bottom: 1px solid var(--glass-border);
-  font-size: 14px;
-}
-
-.operating-hours li:last-child {
-  border-bottom: none;
-}
-
-.operating-hours .day {
-  color: var(--text-main);
-  font-weight: 500;
-}
-
-.operating-hours .time {
-  color: var(--gold);
-  font-weight: 600;
-}
-
-/* ── Map Section ── */
-.contact-map-section {
+/* Map Section */
+.contact-map {
   padding: var(--section-padding) var(--container-px);
   background: var(--surface);
 }
 
-/* ── Responsive ── */
-@media (max-width: 1100px) {
+.contact-map .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-map .section-header {
+  margin-bottom: 40px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 60px;
   }
   
   .contact-form-wrapper {
-    padding: 36px;
+    padding: 32px;
   }
 }
 
-@media (max-width: 768px) {
-  .contact-hero {
-    min-height: 50vh;
+@media (max-width: 600px) {
+  .contact-section {
     padding-top: 100px;
   }
   
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-  
   .contact-form-wrapper {
-    padding: 28px;
-  }
-  
-  .contact-sidebar-block {
-    padding: 28px;
-  }
-  
-  .contact-info-grid {
-    grid-template-columns: 1fr;
+    padding: 24px;
   }
 }
 </style>
@@ -424,188 +238,92 @@ require_once __DIR__ . '/includes/nav.php';
 <!-- ═══════════════════════ HERO ═══════════════════════ -->
 <section class="contact-hero">
   <div class="contact-hero-content">
-    <div class="hero-stars">★★★★★</div>
+    <span class="eyebrow">CONTACT US</span>
     <h1 class="contact-hero-title">Get In Touch</h1>
-    <div class="hero-divider"></div>
     <p class="contact-hero-subtitle">
-      Whether you have a question about reservations, services, or anything else, 
-      our team is ready to answer all your inquiries.
+      Have a question about reservations or services? We're here to help.
     </p>
   </div>
 </section>
 
-<!-- ═══════════════════════ CONTACT INFO BAR ═══════════════════════ -->
-<section class="contact-info-bar">
-  <div class="contact-info-grid">
+<section class="contact-section">
+  <div class="contact-container">
     
-    <div class="contact-info-item reveal">
-      <div class="contact-info-icon">
-        <i class="ph ph-map-pin"></i>
-      </div>
-      <div class="contact-info-content">
-        <h3>Address</h3>
-        <p>123 Luxury Avenue, City Center<br>Guwahati, Assam 781001, India</p>
-      </div>
-    </div>
-    
-    <div class="contact-info-item reveal">
-      <div class="contact-info-icon">
-        <i class="ph ph-phone"></i>
-      </div>
-      <div class="contact-info-content">
-        <h3>Phone</h3>
-        <p>
-          <a href="tel:+911234567890">+91 1234 567 890</a><br>
-          <a href="tel:+911234567891">+91 1234 567 891</a>
-        </p>
-      </div>
-    </div>
-    
-    <div class="contact-info-item reveal">
-      <div class="contact-info-icon">
-        <i class="ph ph-envelope"></i>
-      </div>
-      <div class="contact-info-content">
-        <h3>Email</h3>
-        <p>
-          <a href="mailto:booking@theaspirehotel.com">booking@theaspirehotel.com</a><br>
-          <a href="mailto:info@theaspirehotel.com">info@theaspirehotel.com</a>
-        </p>
-      </div>
-    </div>
-    
-    <div class="contact-info-item reveal">
-      <div class="contact-info-icon">
-        <i class="ph ph-clock"></i>
-      </div>
-      <div class="contact-info-content">
-        <h3>Reception</h3>
-        <p>Open 24 Hours<br>Always at your service</p>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<!-- ═══════════════════════ CONTACT FORM & SIDEBAR ═══════════════════════ -->
-<section class="contact-main">
-  <div class="contact-grid">
-    
-    <!-- Contact Form -->
-    <div class="contact-form-wrapper reveal">
-      <div class="contact-form-header">
-        <span class="eyebrow">SEND US A MESSAGE</span>
-        <h2>Contact Form</h2>
-        <p>Fill out the form below and we'll get back to you within 24 hours.</p>
-      </div>
+    <div class="contact-grid reveal">
       
-      <form class="contact-form" method="post" action="#">
-        <div class="form-row">
+      <!-- Form -->
+      <div class="contact-form-wrapper reveal">
+        <form class="contact-form" method="post" action="#">
           <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
           </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
-          </div>
-        </div>
-        
-        <div class="form-row">
+          
           <div class="form-group">
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" placeholder="john@example.com" required>
           </div>
+          
           <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="reservation">Room Reservation</option>
+              <option value="inquiry">General Inquiry</option>
+              <option value="dining">Restaurant & Dining</option>
+              <option value="events">Events & Meetings</option>
+              <option value="feedback">Feedback</option>
+            </select>
           </div>
-        </div>
-        
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <select id="subject" name="subject" required>
-            <option value="">Select a subject</option>
-            <option value="reservation">Room Reservation</option>
-            <option value="inquiry">General Inquiry</option>
-            <option value="dining">Restaurant & Dining</option>
-            <option value="events">Events & Meetings</option>
-            <option value="spa">Spa & Wellness</option>
-            <option value="feedback">Feedback</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
-        </div>
-        
-        <button type="submit" class="btn-primary">
-          <i class="ph ph-paper-plane-right" style="margin-right: 8px;"></i>
-          SEND MESSAGE
-        </button>
-      </form>
-    </div>
-    
-    <!-- Sidebar -->
-    <div class="contact-sidebar">
-      
-      <!-- Quick Contact -->
-      <div class="contact-sidebar-block reveal">
-        <h3><i class="ph ph-headset"></i> Quick Contact</h3>
-        <ul class="quick-contact-list">
-          <li>
-            <i class="ph ph-phone-call"></i>
-            <span>Reservations: <a href="tel:+911234567890">+91 1234 567 890</a></span>
-          </li>
-          <li>
-            <i class="ph ph-whatsapp-logo"></i>
-            <span>WhatsApp: <a href="https://wa.me/911234567890">+91 1234 567 890</a></span>
-          </li>
-          <li>
-            <i class="ph ph-envelope-simple"></i>
-            <span>Email: <a href="mailto:booking@theaspirehotel.com">booking@theaspirehotel.com</a></span>
-          </li>
-        </ul>
-        
-        <div class="contact-social">
-          <a href="#" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Twitter">TW</a>
-          <a href="#" aria-label="LinkedIn">LN</a>
-        </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary">SEND MESSAGE →</button>
+        </form>
       </div>
       
-      <!-- Operating Hours -->
-      <div class="contact-sidebar-block reveal">
-        <h3><i class="ph ph-clock"></i> Operating Hours</h3>
-        <ul class="operating-hours">
-          <li>
-            <span class="day">Front Desk</span>
-            <span class="time">24 Hours</span>
-          </li>
-          <li>
-            <span class="day">Restaurant</span>
-            <span class="time">7 AM – 11 PM</span>
-          </li>
-          <li>
-            <span class="day">Spa & Wellness</span>
-            <span class="time">9 AM – 9 PM</span>
-          </li>
-          <li>
-            <span class="day">Fitness Center</span>
-            <span class="time">6 AM – 10 PM</span>
-          </li>
-          <li>
-            <span class="day">Business Center</span>
-            <span class="time">24 Hours</span>
-          </li>
-          <li>
-            <span class="day">Room Service</span>
-            <span class="time">24 Hours</span>
-          </li>
-        </ul>
+      <!-- Info -->
+      <div class="contact-info reveal">
+        
+        <div class="contact-info-block">
+          <h3>Location</h3>
+          <p>
+            123 Luxury Avenue, City Center<br>
+            Guwahati, Assam 781001<br>
+            India
+          </p>
+        </div>
+        
+        <div class="contact-divider"></div>
+        
+        <div class="contact-info-block">
+          <h3>Contact</h3>
+          <p>
+            <a href="tel:+911234567890">+91 1234 567 890</a><br>
+            <a href="mailto:booking@theaspirehotel.com">booking@theaspirehotel.com</a>
+          </p>
+        </div>
+        
+        <div class="contact-divider"></div>
+        
+        <div class="contact-info-block">
+          <h3>Hours</h3>
+          <p>
+            Front Desk: 24 Hours<br>
+            Check-in: 2:00 PM<br>
+            Check-out: 12:00 PM
+          </p>
+        </div>
+        
+        <div class="contact-social">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+        </div>
+        
       </div>
       
     </div>
@@ -613,23 +331,17 @@ require_once __DIR__ . '/includes/nav.php';
   </div>
 </section>
 
-<!-- ═══════════════════════ MAP ═══════════════════════ -->
-<section class="contact-map-section">
+<section class="contact-map">
   <div class="container">
     <div class="section-header reveal">
-      <span class="eyebrow">VISIT US</span>
+      <span class="eyebrow">FIND US</span>
       <h2 class="section-title">Our Location</h2>
-      <p class="section-sub">
-        Conveniently located in the heart of Guwahati, easily accessible from the airport 
-        (25 km) and railway station (5 km). Major attractions are just minutes away.
-      </p>
     </div>
     <div class="map-container reveal">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57408.42095597567!2d91.7086485!3d26.1445169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5948b879f007%3A0x6f5f3e3a069a6a7b!2sGuwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-        width="100%" height="450" style="border:0" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="The Aspire Hotel Location – Guwahati">
+        width="100%" height="400" style="border:0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
   </div>
