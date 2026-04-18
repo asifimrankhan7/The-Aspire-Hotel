@@ -8,10 +8,10 @@ const roomsData = {
     guests: "2 Adults - 1 Child",
     view: "Street View",
     gallery: [
-      { url: "./assets/hero_1.png", title: "Royale Suite Main" },
-      { url: "./assets/royale_room_gallery.png", title: "Boutique Interiors" },
-      { url: "./assets/room_royale_2.png", title: "Modern Bedroom" },
-      { url: "./assets/washroom_gallery.png", title: "Premium Washroom" }
+      { url: "./assets/images/hero_1.png", title: "Royale Suite Main" },
+      { url: "./assets/images/royale_room_gallery.png", title: "Boutique Interiors" },
+      { url: "./assets/images/room_royale_2.png", title: "Modern Bedroom" },
+      { url: "./assets/images/washroom_gallery.png", title: "Premium Washroom" }
     ],
     roomAmenities: [
       { name: "Free High-speed Wi-Fi", icon: "wifi" },
@@ -47,10 +47,10 @@ const roomsData = {
     guests: "2 Adults - 1 Child",
     view: "City View",
     gallery: [
-      { url: "./assets/room_deluxe_coll.png", title: "Premium Suite Main" },
-      { url: "./assets/premium_room_gallery.png", title: "Modern Luxury Decor" },
-      { url: "./assets/room_premium_2.png", title: "Elegant Interiors" },
-      { url: "./assets/washroom_gallery.png", title: "Skyline Bathtub" }
+      { url: "./assets/images/room_deluxe_coll.png", title: "Premium Suite Main" },
+      { url: "./assets/images/premium_room_gallery.png", title: "Modern Luxury Decor" },
+      { url: "./assets/images/room_premium_2.png", title: "Elegant Interiors" },
+      { url: "./assets/images/washroom_gallery.png", title: "Skyline Bathtub" }
     ],
     roomAmenities: [
       { name: "Free High-speed Wi-Fi", icon: "wifi" },
@@ -86,11 +86,11 @@ const roomsData = {
     guests: "4 Adults",
     view: "Skyline View",
     gallery: [
-      { url: "./assets/room_suite_coll.png", title: "Deluxe Presidential Suite" },
-      { url: "./assets/deluxe_room_gallery.png", title: "Dining & Living Area" },
-      { url: "./assets/room_deluxe.png", title: "Master Bedroom" },
-      { url: "./assets/room_deluxe_2.png", title: "Lounge Area" },
-      { url: "./assets/washroom_gallery.png", title: "Private Jacuzzi" }
+      { url: "./assets/images/room_suite_coll.png", title: "Deluxe Presidential Suite" },
+      { url: "./assets/images/deluxe_room_gallery.png", title: "Dining & Living Area" },
+      { url: "./assets/images/room_deluxe.png", title: "Master Bedroom" },
+      { url: "./assets/images/room_deluxe_2.png", title: "Lounge Area" },
+      { url: "./assets/images/washroom_gallery.png", title: "Private Jacuzzi" }
     ],
     roomAmenities: [
       { name: "Free Ultra-high-speed Wi-Fi", icon: "wifi" },
