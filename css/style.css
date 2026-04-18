@@ -363,8 +363,8 @@ nav.scrolled .nav-hamburger span {
 .slider-track {
   display: flex;
   height: 100%;
-  transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
   will-change: transform;
+  /* No CSS transition — Embla drives transform via RAF */
 }
 
 .slider-slide {
@@ -1261,7 +1261,7 @@ footer {
 
 .collection-slider .slider-track {
   display: flex;
-  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  /* Embla Carousel controls transform — no manual transition needed */
 }
 
 .collection-slider .slider-slide {
