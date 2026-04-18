@@ -337,8 +337,9 @@
 
     <div class="container">
       <div class="facilities-grid reveal">
-        <?php foreach ($amenities as $item): ?>
+        <?php foreach ($amenities as $idx => $item): ?>
           <div class="amenity-card">
+            <span class="amenity-number"><?= sprintf('%02d', $idx + 1) ?></span>
             <div class="amenity-tag"><?= $item['tag'] ?></div>
             <div class="amenity-icon">
               <i class="ph <?= $item['icon'] ?>"></i>
