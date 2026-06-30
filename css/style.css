@@ -231,9 +231,9 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: background var(--t-base) var(--ease-smooth), 
-              transform var(--t-base) var(--ease-smooth),
-              box-shadow var(--t-base) var(--ease-smooth);
+  transition: background var(--t-base) var(--ease-smooth),
+    transform var(--t-base) var(--ease-smooth),
+    box-shadow var(--t-base) var(--ease-smooth);
 }
 
 .btn-primary::before {
@@ -243,7 +243,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.6s var(--ease-out);
 }
 
@@ -297,9 +297,9 @@ body {
   display: inline-block;
   position: relative;
   overflow: hidden;
-  transition: background var(--t-base) var(--ease-smooth), 
-              transform var(--t-base) var(--ease-smooth), 
-              box-shadow var(--t-base) var(--ease-smooth);
+  transition: background var(--t-base) var(--ease-smooth),
+    transform var(--t-base) var(--ease-smooth),
+    box-shadow var(--t-base) var(--ease-smooth);
 }
 
 .nav-btn::before {
@@ -309,7 +309,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.6s var(--ease-out);
 }
 
@@ -507,8 +507,8 @@ nav.scrolled .nav-logo {
 
 .nav-logo-title {
   font-family: var(--font-serif);
-  font-size: clamp(16px, 1.5vw, 20px);
-  font-weight: 500;
+  font-size: clamp(25px, 2vw, 26px);
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -926,7 +926,7 @@ nav.scrolled .nav-hamburger span {
   position: relative;
   overflow: hidden;
   transition: background var(--t-base) var(--ease-smooth),
-              box-shadow var(--t-base) var(--ease-smooth);
+    box-shadow var(--t-base) var(--ease-smooth);
 }
 
 .story-link::before {
@@ -936,7 +936,7 @@ nav.scrolled .nav-hamburger span {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.6s var(--ease-out);
 }
 
@@ -1655,6 +1655,7 @@ nav.scrolled .nav-hamburger span {
     text-align: center;
     gap: 20px;
   }
+
   .explore-header-left {
     text-align: center;
   }
@@ -1790,17 +1791,21 @@ nav.scrolled .nav-hamburger span {
 }
 
 @media (max-width: 768px) {
+
   .gallery-swiper .swiper-button-next,
   .gallery-swiper .swiper-button-prev {
     display: none;
   }
+
   .gallery-slide-inner {
     height: 320px;
   }
+
   .gallery-swiper .swiper-slide {
     opacity: 1;
     transform: scale(1);
   }
+
   .gallery-swiper .swiper-slide:not(.swiper-slide-active) .gallery-slide-inner {
     filter: brightness(0.85);
   }
@@ -1857,7 +1862,7 @@ nav.scrolled .nav-hamburger span {
   flex-direction: column;
   justify-content: flex-end;
   padding: 20px 24px;
-  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 50%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -1897,6 +1902,7 @@ nav.scrolled .nav-hamburger span {
     column-count: 2;
     column-gap: 16px;
   }
+
   .gallery-grid-item {
     margin-bottom: 16px;
   }
@@ -1907,9 +1913,11 @@ nav.scrolled .nav-hamburger span {
     column-count: 1;
     column-gap: 0;
   }
+
   .gallery-grid-item {
     margin-bottom: 12px;
   }
+
   .gallery-grid-item-overlay {
     opacity: 1;
   }
@@ -2589,7 +2597,7 @@ nav.scrolled .nav-hamburger span {
 .room-gallery-swiper .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   opacity: 1;
   transition: background 0.3s ease, width 0.3s ease;
   border-radius: 4px;
@@ -2870,7 +2878,7 @@ nav.scrolled .nav-hamburger span {
     min-height: auto;
     flex-basis: 100%;
   }
-  
+
   .welcome-content {
     flex-basis: 100%;
   }
@@ -2879,7 +2887,7 @@ nav.scrolled .nav-hamburger span {
     width: 100%;
   }
 
-/* Bento gallery */
+  /* Bento gallery */
   .gallery-grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 280px);
@@ -2929,7 +2937,7 @@ nav.scrolled .nav-hamburger span {
   .collection-slider .slider-slide {
     padding: 0 16px;
   }
-  
+
   .corporate-discount {
     padding: 60px 20px;
   }
@@ -3035,7 +3043,7 @@ nav.scrolled .nav-hamburger span {
     display: none;
   }
 
-/* Features: single column */
+  /* Features: single column */
   .feature-item {
     flex: 1 1 100%;
     border-left: none;
@@ -3045,14 +3053,14 @@ nav.scrolled .nav-hamburger span {
   .feature-item:first-child {
     border-top: none;
   }
-  
+
   .tariff-item {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
     gap: 12px;
   }
-  
+
   .tariff-dash {
     display: none;
   }
@@ -3068,6 +3076,7 @@ nav.scrolled .nav-hamburger span {
     gap: var(--space-4);
   }
 }
+
 /* ════════════════════════════════════════════════════════
    DINING TIMINGS CARD
 ════════════════════════════════════════════════════════ */
@@ -3183,9 +3192,11 @@ nav.scrolled .nav-hamburger span {
     align-items: flex-start;
     gap: 16px;
   }
+
   .timing-value-new {
     align-self: flex-start;
   }
+
   .timing-row-new:hover {
     transform: none;
   }
