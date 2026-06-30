@@ -18,15 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Scroll: Nav + Back-to-Top ──
-  window.addEventListener('scroll', () => {
-    if (!nav) return;
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-
-    const btn = document.getElementById('back-to-top');
-    if (btn) btn.classList.toggle('visible', window.scrollY > 400);
-  });
-
+  let isScrolled = false;
+  let isBttVisible = false;
   const backToTopBtn = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const shouldScroll = scrollY > 60;
+    const shouldBttVisible = scrollY > 400;
+
+    if (nav && shouldScroll !== isScrolled) {
+      isScrolled = shouldScroll;
+      nav.classList.toggle('scrolled', isScrolled);
+    }
+
+    if (shouldBttVisible !== isBttVisible) {
+      isBttVisible = shouldBttVisible;
+      if (backToTopBtn) backToTopBtn.classList.toggle('visible', isBttVisible);
+    }
+  }, { passive: true });
+
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }

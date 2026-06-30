@@ -99,7 +99,7 @@ require_once __DIR__ . '/includes/nav.php';
       <?php foreach ($offers as $offer): ?>
       <div class="offer-detail-card reveal">
         <div class="offer-detail-image">
-          <img src="<?= $offer['image'] ?>" alt="<?= htmlspecialchars($offer['title']) ?>">
+          <img src="<?= $offer['image'] ?>" alt="<?= htmlspecialchars($offer['title']) ?>" loading="lazy">
           <span class="offer-detail-badge"><?= htmlspecialchars($offer['badge']) ?></span>
         </div>
         <div class="offer-detail-info">

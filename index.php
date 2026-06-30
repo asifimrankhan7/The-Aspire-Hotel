@@ -62,7 +62,7 @@
 
       <div class="welcome-visuals reveal">
         <div class="welcome-image-single">
-          <img src="./assets/images/AspireHotel.jpeg" alt="Luxury room" />
+          <img src="./assets/images/AspireHotel.jpeg" alt="Luxury room" loading="lazy" />
         </div>
       </div>
 
@@ -118,6 +118,22 @@
           <span class="tariff-price">₹2,600<span class="tariff-gst">+ G.S.T.</span></span>
         </div>
       </div>
+
+      <!-- TARIFF POLICY / INFO -->
+      <div class="tariff-policy reveal">
+        <div class="policy-item">
+          <i class="ph ph-clock"></i>
+          <span><strong>Check-in:</strong> 12:00 PM</span>
+        </div>
+        <div class="policy-item">
+          <i class="ph ph-clock"></i>
+          <span><strong>Check-out:</strong> 11:00 AM</span>
+        </div>
+        <div class="policy-note">
+          <i class="ph ph-info"></i>
+          <span>Early check-in and late check-out are available at additional charges.</span>
+        </div>
+      </div>
     </div>
 
     <!-- CORPORATE DISCOUNT -->
@@ -164,7 +180,7 @@
               </div>
               <div class="room-image-pane">
                 <img src="<?= htmlspecialchars(resolveRoomImage($room, $room['gallery'][0]['url'])) ?>"
-                  alt="<?= htmlspecialchars($room['name']) ?>" />
+                  alt="<?= htmlspecialchars($room['name']) ?>" loading="lazy" />
               </div>
             </div>
           </div>
@@ -298,21 +314,21 @@
             <!-- Slide 2 -->
             <div class="swiper-slide">
               <div class="gallery-slide-inner">
-                <img src="./assets/images/Slider2.jpeg" alt="Infinity Pool" />
+                <img src="./assets/images/Slider2.jpeg" alt="Infinity Pool" loading="lazy" />
               
               </div>
             </div>
             <!-- Slide 3 -->
             <div class="swiper-slide">
               <div class="gallery-slide-inner">
-                <img src="./assets/images/Slider3.jpeg" alt="City Views" />
+                <img src="./assets/images/Slider3.jpeg" alt="City Views" loading="lazy" />
                 
               </div>
             </div>
             <!-- Slide 4 -->
             <div class="swiper-slide">
               <div class="gallery-slide-inner">
-                <img src="./assets/images/Slider4.jpeg" alt="Modern Suites" />
+                <img src="./assets/images/Slider4.jpeg" alt="Modern Suites" loading="lazy" />
                 
               </div>
             </div>
