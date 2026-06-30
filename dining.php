@@ -76,6 +76,14 @@ require_once __DIR__ . '/includes/nav.php';
           <span class="stat-value">08:00 PM – 11:00 PM</span>
         </div>
       </div>
+
+      <!-- Menu Button -->
+      <div class="reveal" style="margin-top: calc(-1 * var(--space-8));">
+        <a href="./assets/menu/menu.pdf" target="_blank" class="btn-primary">
+          <i class="ph ph-file-text" style="margin-right: 8px; font-size: 16px;"></i>
+          VIEW OUR MENU
+        </a>
+      </div>
     </div>
 
 

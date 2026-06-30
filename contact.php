@@ -291,7 +291,7 @@
       <!-- Right: Map -->
       <div class="contact-map-side">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.5459044842532!2d91.747947!3d26.1789144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a2ea441a79d%3A0xf15fc9ed914aefc6!2sSilver%20Aspire%20Tower!5e0!3m2!1sen!2sin!4v1778962211881!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d895.1356168762234!2d91.7480495558197!3d26.179026275262952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5b006f16fd55%3A0xc63afee5430b1a1b!2sThe%20Aspire%20Hotel!5e0!3m2!1sen!2sin!4v1782796244575!5m2!1sen!2sin"
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
