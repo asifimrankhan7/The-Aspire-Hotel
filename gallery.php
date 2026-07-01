@@ -63,7 +63,7 @@ foreach ($galleryImages as $img) {
       <h2 class="details-heading">Moments that define<br />The Aspire experience.</h2>
     </div>
 
-    <div class="gallery-grid-page reveal" id="galleryGrid">
+    <div class="gallery-grid-page" id="galleryGrid">
       <?php foreach ($galleryImages as $i => $img): ?>
         <div class="gallery-grid-item" data-index="<?= $i ?>">
           <img src="./assets/images/<?= htmlspecialchars($img['src']) ?>" alt="<?= htmlspecialchars($img['title']) ?>" loading="lazy" />

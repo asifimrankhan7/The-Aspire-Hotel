@@ -18,7 +18,7 @@ require_once __DIR__ . '/includes/nav.php';
 <!-- ═══════════════════════ DINING HERO ═══════════════════════ -->
 <section class="details-hero">
   <img
-    src="./assets/images/Slider2.jpeg"
+    src="./assets/images/Slider1.jpeg"
     alt="The Grand Restaurant"
     class="details-hero-img"
   />
