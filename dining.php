@@ -10,7 +10,7 @@
 <body>
 
 <?php
-$navPage  = 'contact'; // Use 'contact' state to ensure links point back to index.php
+$navPage  = 'dining';
 $navClass = 'scrolled';
 require_once __DIR__ . '/includes/nav.php';
 ?>

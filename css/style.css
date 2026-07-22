@@ -3257,3 +3257,46 @@ nav.scrolled .nav-hamburger span {
     transform: none;
   }
 }
+
+/* ════════════════════════════════════════════════════════
+   ACCESSIBILITY & FOCUS VISIBILITY (WCAG 2.1 AA)
+════════════════════════════════════════════════════════ */
+:focus-visible {
+  outline: 2px solid var(--gold) !important;
+  outline-offset: 3px !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold) !important;
+  outline-offset: 3px !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Touch target sizing for mobile usability */
+@media (max-width: 768px) {
+  .nav-hamburger,
+  .mobile-menu-close,
+  .subnav-toggle,
+  .slider-arrow,
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

@@ -10,7 +10,7 @@ $pageDescription = 'Read the Terms and Conditions of The Aspire Hotel, including
 <body>
 
 <?php
-$navPage  = 'contact'; // Use 'contact' state to ensure links point back to index.php
+$navPage  = 'terms';
 $navClass = 'scrolled';
 require_once __DIR__ . '/includes/nav.php';
 ?>

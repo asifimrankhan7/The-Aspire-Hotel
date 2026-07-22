@@ -1,12 +1,12 @@
 <!-- LIGHTBOX MODAL -->
-<div id="lightbox" class="lightbox">
-  <span class="lightbox-close">&times;</span>
-  <button class="lightbox-prev">&lsaquo;</button>
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery lightbox">
+  <button class="lightbox-close" aria-label="Close image lightbox">&times;</button>
+  <button class="lightbox-prev" aria-label="Previous image">&lsaquo;</button>
   <div class="lightbox-content">
     <img id="lightbox-img" src="" alt="Gallery Image" />
     <div id="lightbox-caption" class="lightbox-caption"></div>
   </div>
-  <button class="lightbox-next">&rsaquo;</button>
+  <button class="lightbox-next" aria-label="Next image">&rsaquo;</button>
 </div>
 
 <!-- BACK TO TOP -->

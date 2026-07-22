@@ -7,6 +7,7 @@ $pageDescription = $pageDescription ?? 'The Aspire Hotel, located in the heart o
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title><?= htmlspecialchars($pageTitle) ?></title>
 <meta name="description" content="<?= htmlspecialchars($pageDescription) ?>" />
+<link rel="icon" type="image/png" href="./assets/images/LOGO1.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@200;300;400;500;700&display=swap" rel="stylesheet" />

@@ -160,7 +160,7 @@ require_once __DIR__ . '/includes/nav.php';
       <div class="swiper-wrapper">
         <?php foreach ($room['gallery'] as $i => $img): ?>
         <div class="swiper-slide room-gallery-slide" data-index="<?= $i ?>">
-          <img src="<?= htmlspecialchars($img['url']) ?>" alt="" loading="lazy" />
+          <img src="<?= htmlspecialchars($img['url']) ?>" alt="<?= htmlspecialchars(!empty($img['title']) ? $img['title'] : $room['name']) ?>" loading="lazy" />
         </div>
         <?php endforeach; ?>
       </div>
